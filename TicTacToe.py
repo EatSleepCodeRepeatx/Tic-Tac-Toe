@@ -103,7 +103,7 @@ while True:
             theBoard[position] = ol
             if win_check(theBoard, o1):
                 display_board(theBoard)
-                print(f'{o2} win the game!')
+                print(f'{o1} win the game!')
                 game_on = False
             else:
                 if full_board_check(theBoard):
@@ -114,6 +114,7 @@ while True:
                     turn = 'Player 2'
         else:
             # Player2's turn.
+        if turn == 'Player 2':
             display_board(theBoard)
             position = your_choice(theBoard)
             theBoard[position] = o2
